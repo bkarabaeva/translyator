@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bkarabaeva.trnslayator.fragments.TranslateFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/translateToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/changer"
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/ic_compare_arrows_black_24dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Russian"
+            android:layout_toLeftOf="@id/changer"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/fromTextView" />
+        <TextView
+            android:id="@+id/toLangText"
+            android:layout_toRightOf="@id/changer"
+            android:text="English"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/translateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:ems="8"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/translateToolbar" />
+
+    <Button
+        android:id="@+id/translateBtn"
+        android:text="Tranlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/translateEditText"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/translatedView"
+        android:layout_below="@id/translateBtn"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
