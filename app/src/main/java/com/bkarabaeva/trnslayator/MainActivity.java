@@ -12,6 +12,13 @@ import android.view.MenuItem;
 import com.bkarabaeva.trnslayator.fragments.BookmarkFragment;
 import com.bkarabaeva.trnslayator.fragments.TranslateFragment;
 
+/*
+*  Я узнала очень поздно о школе мобильной разработки.
+*  Все что успела за короткий срок в этом проекте
+*
+*  Я очень хочу пройти школу мобильной разработки
+**/
+
 public class MainActivity extends AppCompatActivity {
     private Fragment fragment;
     private FragmentManager fragmentManager;
